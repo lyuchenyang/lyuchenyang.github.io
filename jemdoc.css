@@ -17,7 +17,8 @@ table#tlayout {
 body {
 	background: white;
 	/* font-family: Georgia, serif; */
-	font-family: Arial, Helvetica, sans-serif;
+	/* font-family: Arial, Helvetica, sans-serif; */
+	font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
 	/* font-family: monaco, monospace; */
 	font-size: 12pt;
 	padding-bottom: 10px;
