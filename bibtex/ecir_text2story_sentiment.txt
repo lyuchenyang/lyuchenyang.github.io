@@ -1,0 +1,7 @@
+@inproceedings{lyu2020incorporating,
+  title={Incorporating Context and Knowledge for Better Sentiment Analysis of Narrative Text.},
+  author={Lyu, Chenyang and Ji, Tianbo and Graham, Yvette},
+  booktitle={Text2Story@ ECIR},
+  pages={39--45},
+  year={2020}
+}
