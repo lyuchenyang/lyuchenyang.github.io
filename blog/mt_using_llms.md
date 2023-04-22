@@ -1,5 +1,5 @@
 # New Trends in Machine Translation using Large Language Models
-
+Chenyang Lyu and Jitao Xu
 <!-- ## Abstract -->
 Machine Translation (MT) has made significant progress in recent years using deep learning, especially after the emergence of large language models (LLMs) such as GPT-3 and ChatGPT. That brings new challenges and opportunities for MT using LLMs. In this blog, we brainstorm some new directions for MT using LLMs, including stylized MT, interactive MT, and Translation Memory-based MT, as well as a new evaluation paradigm using LLMs. We also discuss the privacy concerns in MT using LLMs and some basic privacy-preserving methods to mitigate such risks. To illustrate the potential of our proposed directions, we present several examples for the new directions mentioned above, demonstrating effectiveness and feasibility of the proposed directions and highlight the opportunities and challenges for future research in MT using LLMs.
 
