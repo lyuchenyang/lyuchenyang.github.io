@@ -97,6 +97,12 @@ One basic approach to privacy in MT using LLMs is to anonymize sensitive informa
 However, privacy in MT using LLMs also poses several challenges. One challenge is how to balance the trade-off between privacy and accuracy, as privacy-preserving methods may introduce additional noise or distortion to the translation output. Another challenge is how to ensure the interoperability and compatibility of privacy-preserving methods across different languages, models, and platforms. Overcoming these challenges requires collaboration between experts in cryptography, privacy, and MT, as well as adherence to ethical and legal standards.
 
 
+## Future Directions
+Personalized MT - With the advancements in LLM-based MT, the focus can be shifted towards personalized MT. This approach can enable the provision of customized translations that are tailored to each user's preferences and needs. It can include translations that are adapted to the user's language proficiency, domain-specific terminology, or cultural references. One possible approach to provide personalized MT is to prompt LLMs with user-specific preferences or metadata, such as user search histories or social media posts. The zero-shot ability of LLMs makes such tasks feasible, which is difficult to achieve in previous MT systems because such data is usually unavailable. However, personalized MT raises several challenges. One challenge is how to collect and store user-specific data in a privacy-preserving manner. Another challenge is how to measure the effectiveness of personalized MT, as traditional evaluation metrics may not capture the nuances of user preferences and needs. Overcoming these challenges requires careful consideration of ethical, legal, and technical issues.
+
+
+Multi-modal MT - Another promising direction is multi-modal MT, which involves integrating visual, audio, or other non-textual information into the translation process. This approach can enhance the quality and accuracy of translations in various settings, such as image or video captioning, speech recognition, and sign language translation. LLMs, such as GPT-4, can be employed to develop models that can learn from multimodal data and generate translations that accurately convey the meaning of the input. However, multi-modal MT poses several challenges, such as data heterogeneity, unbalanced datasets, and domain specificity. Overcoming these challenges would require developing novel algorithms that can learn from multimodal data and generalize well across different modalities and domains.
+
 
 ## References
 
