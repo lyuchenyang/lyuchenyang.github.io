@@ -1,5 +1,8 @@
 # New Trends in Machine Translation using Large Language Models
 *<a href="https://lyuchenyang.github.io/">Chenyang Lyu</a>, <a href="https://jitao-xu.github.io/">Jitao Xu</a> and <a href="http://longyuewang.com/">Longyue Wang</a>*
+
+
+
 <!-- ## Abstract -->
 Machine Translation (MT) has made significant progress in recent years using deep learning, especially after the emergence of Large Language Models (LLMs) such as GPT-3 and ChatGPT. That brings new challenges and opportunities for MT using LLMs. In this blog, we brainstorm some interesting directions for MT using LLMs, including stylized MT, interactive MT, and Translation Memory-based MT, as well as new evaluation paradigm using LLMs. We also discuss the privacy concerns in MT using LLMs and show a basic privacy-preserving method to mitigate such risks. To illustrate the potential of our proposed directions, we present several examples for the new directions mentioned above, demonstrating the feasibility of the proposed directions and highlight the opportunities and challenges for future research in MT using LLMs.
 
@@ -31,8 +34,6 @@ Stylized MT refers to the ability to generate translations that match a specific
 
 However, stylized MT also poses several challenges. One challenge is how to define and measure different styles or genres in a systematic and scalable way. Another challenge is how to evaluate the quality of stylized MT, as traditional evaluation metrics may not be sufficient to capture the diversity of stylistic variations. Overcoming these challenges requires interdisciplinary collaboration between linguists, literary scholars, and computer scientists.
 
-<!-- ![An example of prompting ChatGPT to translate text from English to Chinese using poetic style.](Figures/stylized_mt_example.png) -->
-
 
 
 
@@ -49,10 +50,6 @@ However, stylized MT also poses several challenges. One challenge is how to defi
 Interactive MT allows users to actively participate in the translation process [4], either by correcting or refining automatic translations or by providing feedback on the translation quality. This can be achieved by integrating MT systems based on LLMs with interactive user interfaces, such as chatbots or online forums, that allow users to engage with the translation process in real time to provide feedback and more specific requirements. Interactive MT can help to improve the accuracy and fluency of translations, especially in cases where the source language is ambiguous or the domain knowledge is limited.
 
 However, interactive MT also raises several challenges. One challenge is how to design user interfaces that are intuitive and user-friendly, yet also informative and flexible. Another challenge is how to incorporate user feedback into the translation process in a principled and effective way. Overcoming these challenges requires insights from human-computer interaction, natural language processing, and user experience design.
-
-<!-- ![An example of using ChatGPT for interactive MT.](Figures/interactive_mt_example_1.png)
-![An example of using ChatGPT for interactive MT.](Figures/interactive_mt_example_2.png)
-*An example of using ChatGPT for interactive MT.* -->
 
 
 
@@ -74,7 +71,6 @@ Previous studies on conventional TM-based MT have also shown that conventional T
   <p align="center"> <b><a>Figure 3. An example of using ChatGPT for evaluating translation outputT.</a></b> </p>
 </p>
 
-<!-- ![An example of using ChatGPT for evaluating translation output.](Figures/eval_mt_example_1.png "Example 1"){width=40%} ![An example of using ChatGPT for evaluating translation output.](Figures/eval_mt_example_2.png "Example 2"){width=40%} -->
 
 Evaluating the quality of MT using LLMs is a challenging task, as existing evaluation metrics may not be sufficient to capture the full range of translation quality. In addition, existing open-access test sets may suffer from the data contamination problem as they are possibly used during the training process of LLMs. Evaluating on these test sets cannot correctly reflect the MT performance of LLMs. A new evaluation paradigm for MT using LLMs should take into account the unique characteristics of LLM-based MT, such as the ability to generate fluent but inaccurate translations or the sensitivity to domain-specific knowledge. Possible approaches to a new evaluation paradigm include using human evaluations or even directly employ LLMs to evaluate the translation output - although studies show that LLMs would prefer the translation output from LLMs instead of other systems [6]. An example of using ChatGPT to evaluate the translation output for a tweet from Elon Musk is shown in Figure 3.
 
@@ -90,15 +86,14 @@ However, developing a new evaluation paradigm also poses several challenges. One
   <img src="Figures/privacy_mt_example_2.png" alt="An example of privacy issue in using ChatGPT for MT."/>
   <p align="center"> <b><a>Figure 3. An example of privacy issue in using ChatGPT for MT. The upper one is the example where the input is not anonymized, thus containing people's name information, etc. The latter one is the example where the sensitive information in the input is anonymized.</a></b> </p>
 </p>
+
+
 As LLMs become more powerful and widely used in MT, there are growing concerns about privacy and security. In particular, LLMs may inadvertently reveal sensitive information in the source text or the translation output, such as personally identifiable information, confidential business data, or political opinions. Privacy in MT using LLMs aims to mitigate these risks by developing privacy-preserving methods that can protect the confidentiality and integrity of the translation process.
 
 One basic approach to privacy in MT using LLMs is to anonymize sensitive information in the textual input and then pass it to LLMs and get the output, which is then de-anonymized. An example of such privacy issue using LLMs and our basic solution is shown below.
 
 However, privacy in MT using LLMs also poses several challenges. One challenge is how to balance the trade-off between privacy and accuracy, as privacy-preserving methods may introduce additional noise or distortion to the translation output. Another challenge is how to ensure the interoperability and compatibility of privacy-preserving methods across different languages, models, and platforms. Overcoming these challenges requires collaboration between experts in cryptography, privacy, and MT, as well as adherence to ethical and legal standards.
-<!-- ![An example of privacy issue using ChatGPT for MT. The left one (a) is the example where the input is not anonymized, thus containing people's name information, etc. The right one is the example where the sensitive information in the input is anonymized.](Figures/privacy_mt_example_1.png "An example of privacy issue using ChatGPT for MT")
 
-![An example of privacy issue using ChatGPT for MT. The left one (a) is the example where the input is not anonymized, thus containing people's name information, etc. The right one is the example where the sensitive information in the input is anonymized.](Figures/privacy_mt_example_2.png "An example of privacy issue using ChatGPT for MT")
- -->
 
 
 ## References
