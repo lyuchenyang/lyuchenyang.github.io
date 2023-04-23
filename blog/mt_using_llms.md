@@ -1,4 +1,7 @@
 
+<style>
+  .page-heading { display: none; }
+</style>
 
 
 # New Trends in Machine Translation using Large Language Models
