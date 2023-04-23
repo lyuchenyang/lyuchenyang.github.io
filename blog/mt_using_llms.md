@@ -1,9 +1,3 @@
-
-<style>
-  .page-heading { display: none; }
-</style>
-
-
 # New Trends in Machine Translation using Large Language Models
 *<a href="https://lyuchenyang.github.io/">Chenyang Lyu</a>, <a href="https://jitao-xu.github.io/">Jitao Xu</a> and <a href="http://longyuewang.com/">Longyue Wang</a>*
 
@@ -53,7 +47,7 @@ However, stylized MT also poses several challenges. One challenge is how to defi
   <p align="center"> <b><a>Figure 2. An example of using ChatGPT for interactive MT.</a></b> </p>
 </p>
 
-Interactive MT allows users to actively participate in the translation process [4], either by correcting or refining automatic translations or by providing feedback on the translation quality. This can be achieved by integrating MT systems based on LLMs with interactive user interfaces, such as chatbots or online forums, that allow users to engage with the translation process in real time to provide feedback and more specific requirements. Interactive MT can help to improve the accuracy and fluency of translations, especially in cases where the source language is ambiguous or the domain knowledge is limited.
+Interactive MT allows users to actively participate in the translation process, either by correcting or refining automatic translations or by providing feedback on the translation quality. This can be achieved by integrating MT systems based on LLMs with interactive user interfaces, such as chatbots or online forums, that allow users to engage with the translation process in real time to provide feedback and more specific requirements. Interactive MT can help to improve the accuracy and fluency of translations, especially in cases where the source language is ambiguous or the domain knowledge is limited.
 
 However, interactive MT also raises several challenges. One challenge is how to design user interfaces that are intuitive and user-friendly, yet also informative and flexible. Another challenge is how to incorporate user feedback into the translation process in a principled and effective way. Overcoming these challenges requires insights from human-computer interaction, natural language processing, and user experience design.
 
@@ -61,7 +55,7 @@ However, interactive MT also raises several challenges. One challenge is how to 
 
 ## Translation Memory-based MT
 
-TM has been used for decades to help translators in basic Computer-Aided Translation (CAT) systems. The general process of using TM in MT is, for a sentence to be translated, to first search for similar translations in MT using, for instance, fuzzy matching techniques [5], then revise or edit the retrieved similar translation in order to obtain a high quality translation. TM-based MT has already been integrated into conventional neural MT systems. The use of retrieved similar sentence pairs seems to be a natural fit to few-shot prompting techniques when performing MT using LLMs. LLMs has emerged the In-Context Learning (ICL) ability that they can learn specific tasks through task examples given in the prompt. 
+TM has been used for decades to help translators in basic Computer-Aided Translation (CAT) systems. The general process of using TM in MT is, for a sentence to be translated, to first search for similar translations in MT using, for instance, fuzzy matching techniques [4], then revise or edit the retrieved similar translation in order to obtain a high quality translation. TM-based MT has already been integrated into conventional neural MT systems. The use of retrieved similar sentence pairs seems to be a natural fit to few-shot prompting techniques when performing MT using LLMs. LLMs has emerged the In-Context Learning (ICL) ability that they can learn specific tasks through task examples given in the prompt. 
 
 However, existing works so far have mostly used randomly selected translation examples as prompts and suggest that using semantically similar examples does not significantly further improve the translation performance. Most of these works used sentence-level embeddings built by an external model to retrieve similar examples via embedding similarity search. On the contrary, other studies using fuzzy match to retrieve similar translations have shown significant improvements. Therefore, the conclusion about the effectiveness of using similar translations in MT using LLMs still remains unclear. Since TMs can provide useful domain and style information that can help LLMs to generate translations that better meets the translation requirement, it is a promising direction to further study how to better integrate TMs into LLMs for MT.
 
@@ -78,7 +72,7 @@ Previous studies on conventional TM-based MT have also shown that conventional T
 </p>
 
 
-Evaluating the quality of MT using LLMs is a challenging task, as existing evaluation metrics may not be sufficient to capture the full range of translation quality. In addition, existing open-access test sets may suffer from the data contamination problem as they are possibly used during the training process of LLMs. Evaluating on these test sets cannot correctly reflect the MT performance of LLMs. A new evaluation paradigm for MT using LLMs should take into account the unique characteristics of LLM-based MT, such as the ability to generate fluent but inaccurate translations or the sensitivity to domain-specific knowledge. Possible approaches to a new evaluation paradigm include using human evaluations or even directly employ LLMs to evaluate the translation output - although studies show that LLMs would prefer the translation output from LLMs instead of other systems [6]. An example of using ChatGPT to evaluate the translation output for a tweet from Elon Musk is shown in Figure 3.
+Evaluating the quality of MT using LLMs is a challenging task, as existing evaluation metrics may not be sufficient to capture the full range of translation quality. In addition, existing open-access test sets may suffer from the data contamination problem as they are possibly used during the training process of LLMs. Evaluating on these test sets cannot correctly reflect the MT performance of LLMs. A new evaluation paradigm for MT using LLMs should take into account the unique characteristics of LLM-based MT, such as the ability to generate fluent but inaccurate translations or the sensitivity to domain-specific knowledge. Possible approaches to a new evaluation paradigm include using human evaluations or even directly employ LLMs to evaluate the translation output - although studies show that LLMs would prefer the translation output from LLMs instead of other systems [5]. An example of using ChatGPT to evaluate the translation output for a tweet from Elon Musk is shown in Figure 3.
 
 However, developing a new evaluation paradigm also poses several challenges. One challenge is how to balance the trade-off between evaluation efficiency and evaluation quality, as human evaluations can be time-consuming and expensive and LLM-based evaluation can be biased. Another challenge is how to ensure the reliability and validity of the evaluation results, as different evaluators may have different subjective judgments or biases. Overcoming these challenges requires rigorous experimental design, statistical analysis, and transparency in reporting.
 
@@ -110,8 +104,6 @@ However, privacy in MT using LLMs also poses several challenges. One challenge i
 
 [3] Wang, Yifan, et al. "Controlling Styles in Neural Machine Translation with Activation Prompt." arXiv preprint arXiv:2212.08909 (2022).
 
-[4] Huang, Guoping, et al. "Transmart: A practical interactive machine translation system." arXiv preprint arXiv:2105.13072 (2021).
+[4] Moslem, Yasmin, Rejwanul Haque, and Andy Way. "Adaptive Machine Translation with Large Language Models." arXiv preprint arXiv:2301.13294 (2023).
 
-[5] Moslem, Yasmin, Rejwanul Haque, and Andy Way. "Adaptive Machine Translation with Large Language Models." arXiv preprint arXiv:2301.13294 (2023).
-
-[6] Liu, Yang, et al. "GPTEval: NLG Evaluation using GPT-4 with Better Human Alignment." arXiv preprint arXiv:2303.16634 (2023).
+[5] Liu, Yang, et al. "GPTEval: NLG Evaluation using GPT-4 with Better Human Alignment." arXiv preprint arXiv:2303.16634 (2023).
