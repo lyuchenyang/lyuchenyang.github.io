@@ -1,164 +1,75 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!doctype html>
+<html lang="en">
 <head>
-<meta name="Chenyang-Lyu's-Personal Page" content="Chenyang Lyu's Personal Page" />
-<meta http-equiv="Chenyang-Lyu's-Personal Page" content="Chenyang Lyu's Personal Page" />
-<link rel="stylesheet" href="jemdoc.css" type="text/css" />
-<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
-<title>Chenyang Lyu's Personal Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chenyang Lyu — Staff Researcher and Tech Lead working on multilingual, multimodal and speech large language models.">
+  <title>Chenyang Lyu | AI Researcher</title>
+  <style>
+    :root{--theme:#b509ac;--text:#2b2b2b;--muted:#666;--light:#f5f5f5;--line:#ddd;--card:#fff;--max:930px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.62}a{color:var(--theme);text-decoration:none}a:hover{text-decoration:underline}.container{width:min(calc(100% - 36px),var(--max));margin:auto}
+    .site-nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-bottom:1px solid #eee;backdrop-filter:blur(8px)}.nav-inner{height:62px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:650;color:#222;font-size:18px}.brand:hover{text-decoration:none}.nav-links{display:flex;gap:22px}.nav-links a{color:#555;font-size:13px}.nav-links a:hover{color:var(--theme)}
+    header{padding:54px 0 25px}.title-row{border-bottom:1px solid var(--line);padding-bottom:18px}.title-row h1{font-size:34px;font-weight:400;letter-spacing:-.025em;margin:0}.header-links{display:flex;flex-wrap:wrap;gap:7px 16px;margin-top:10px}.header-links a{font-size:13px;font-weight:550}
+    .intro{display:grid;grid-template-columns:1fr 180px;gap:38px;padding:26px 0 10px}.intro p{margin:0 0 14px}.intro .lead{font-size:16px}.profile-photo{margin:0}.profile-photo img{display:block;width:180px;height:225px;object-fit:cover;border-radius:6px;border:1px solid #ddd}.profile-photo figcaption{font-size:10px;color:#888;line-height:1.4;margin-top:6px}
+    section{padding:36px 0 4px;scroll-margin-top:75px}h2{font-size:25px;font-weight:500;margin:0 0 18px;letter-spacing:-.015em}h3{font-size:17px;margin:0 0 8px}.research-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.research-card{border:1px solid #e0e0e0;border-radius:6px;padding:21px;background:var(--card)}.research-card .icon{font-size:24px;margin-bottom:7px}.research-card p{color:var(--muted);font-size:13.5px;margin:0 0 11px}.research-card .papers{font-size:12px}
+    .section-rule{border:0;border-top:1px solid var(--line);margin:42px 0 0}.institution-list{display:grid;gap:4px}.institution{display:grid;grid-template-columns:64px 1fr 130px;gap:18px;align-items:center;padding:15px 0;border-bottom:1px solid #eee}.logo-box{width:58px;height:58px;border:1px solid #e2e2e2;border-radius:5px;background:white;display:grid;place-items:center;padding:7px}.logo-box img{max-width:100%;max-height:100%;object-fit:contain}.institution h3{font-size:15px;margin:0 0 2px}.institution p{font-size:13px;color:var(--muted);margin:0}.institution time{font-size:12px;color:#777;text-align:right}
+    .experience-groups{display:grid;grid-template-columns:1fr 1fr;gap:36px}.experience-groups h3{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:#777;border-bottom:1px solid var(--line);padding-bottom:8px}.compact-role{display:grid;grid-template-columns:42px 1fr;gap:12px;align-items:center;padding:10px 0}.compact-role .logo-box{width:42px;height:42px;padding:5px}.compact-role strong{display:block;font-size:13px}.compact-role span{font-size:12px;color:var(--muted)}
+    .news-list{list-style:none;padding:0;margin:0}.news-item{display:grid;grid-template-columns:95px 1fr;gap:14px;padding:8px 0}.news-item time{color:#777;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}.news-item p{margin:0;font-size:14px}.news-page{margin-top:12px;font-size:13px}
+    .pub-note{color:var(--muted);font-size:13px;margin-top:-8px}.publication{display:grid;grid-template-columns:75px 1fr;gap:20px;padding:20px 0;border-top:1px solid #e6e6e6}.publication:last-of-type{border-bottom:1px solid #e6e6e6}.abbr{background:var(--theme);color:white;border-radius:4px;font-size:11px;font-weight:700;text-align:center;padding:5px 6px;align-self:start;line-height:1.25}.pub-title{font-weight:650;line-height:1.4;margin-bottom:4px}.authors,.venue{font-size:13px;color:var(--muted);margin:2px 0}.venue{font-style:italic}.pub-links{margin-top:7px;display:flex;flex-wrap:wrap;gap:6px}.pub-links a,.award{font-size:11px;border:1px solid #cfcfcf;border-radius:3px;padding:2px 6px;color:#555}.pub-links a:hover{border-color:var(--theme);color:var(--theme);text-decoration:none}.award{border-color:#e4bd8f;background:#fff6e9;color:#8b560f;font-weight:700}.all-pubs{display:inline-block;margin-top:17px;font-size:13px;font-weight:600}
+    footer{margin-top:52px;border-top:1px solid var(--line);padding:26px 0;color:#777;font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:20px}.source-note{font-size:11px;color:#999;margin-top:8px}
+    @media(max-width:720px){.nav-links{display:none}.intro{grid-template-columns:1fr}.profile-photo{order:-1}.profile-photo img{width:150px;height:188px}.research-grid,.experience-groups{grid-template-columns:1fr}.institution{grid-template-columns:56px 1fr}.institution time{grid-column:2;text-align:left;margin-top:-12px}.news-item{grid-template-columns:82px 1fr}}@media(max-width:480px){.container{width:min(calc(100% - 26px),var(--max))}.publication{grid-template-columns:1fr;gap:8px}.abbr{justify-self:start}.intro{padding-top:20px}.title-row h1{font-size:30px}.footer-row{display:block}.footer-row span{display:block;margin:4px 0}}
+  </style>
 </head>
 <body>
-<div id="layout-content" style="width:60%; height: 80%;", class="center">
-<!-- <table class="imgtable"><tr><td> -->
-<td align="left"><h1>Chenyang Lyu 吕晨阳 <br /></h1>
-<p>Staff Researcher at Alibaba and PhD from Ml-Labs, Dublin City University</br>
-	Glasnevin, Dublin</br>
-	Ireland<br />
-<br/>
-    <i><b>Email</b>: lyuchenyang.dcu [at] gmail [dot] com </i><br />
- 
-<a href="https://scholar.google.com/citations?user=0n7cAw0AAAAJ&hl=zh-CN&oi=sra">Google Scholar</a> &nbsp;
-<a href="https://twitter.com/Chenyang_Lyu">Twitter</a> &nbsp;
-<a href="https://dblp.org/pid/248/1663.html">DBLP</a> &nbsp;
-<a href="https://www.linkedin.com/in/chenyang-l-273152196/">LinkedIn</a></p>
-<!-- </td></tr></table> -->
+  <nav class="site-nav" aria-label="Primary"><div class="container nav-inner"><a class="brand" href="#top">Chenyang Lyu</a><div class="nav-links"><a href="#research">Research</a><a href="#education">Education</a><a href="#experience">Experience</a><a href="#news">News</a><a href="#publications">Publications</a></div></div></nav>
+  <main class="container" id="top">
+    <header>
+      <div class="title-row">
+        <h1>Chenyang Lyu, Ph.D.</h1>
+        <div class="header-links">
+          <a href="https://scholar.google.com/citations?user=0n7cAw0AAAAJ">Google Scholar</a>
+          <a href="https://dblp.org/pid/248/1663.html">DBLP</a>
+          <a href="https://www.linkedin.com/in/chenyang-l-273152196/">LinkedIn</a>
+          <a href="https://twitter.com/Chenyang_Lyu">X / Twitter</a>
+          <a href="mailto:lyuchenyang.dcu@gmail.com">Email</a>
+        </div>
+      </div>
+      <div class="intro">
+        <div>
+          <p class="lead">I am currently a <strong>Staff Researcher/Tech Lead at Alibaba ATH</strong>, where I lead the <strong>Speech and Omni LLM Applied Research</strong> team. Previously, I was a researcher at the Mohamed bin Zayed University of Artificial Intelligence (MBZUAI), focusing on multilingual and multimodal large language models. I earned my Ph.D. in Machine Learning from Dublin City University's ML-Labs in 2023, following a Bachelor of Engineering from Northeastern University in China in 2018.</p>
+          <p>My research lies primarily in natural language processing, with a focus on <strong>LLMs</strong> across <strong>multilingual</strong>, <strong>multimodal</strong>, and <strong>speech</strong> settings, as well as <strong>LLM agents</strong>. Recent work includes <strong>CoQuIR</strong>, selected at ACL 2026, plus accepted papers at COLM 2026, CVPR 2026, and ICASSP 2026. Other recent work spans foundational LLMs, multilingual/multimodal/speech LLMs, and LLM agents, including <strong>Marco-MoE</strong>, <strong>Trust No Tool</strong>, and <strong>Crayotter</strong>.</p>
+          <p><strong>GPT4Video</strong> was nominated for the Best Paper Award at ACM-MM 2024. My open-source projects and contributions have collectively earned <strong>4k+ GitHub stars</strong>, and I won <strong>two championships and two runner-up prizes</strong> in the IWSLT 2025 speech translation competition. Prior to my current role, I gained extensive research experience through positions as a research assistant and visiting scholar at Tencent AI Lab, the National Institute of Informatics (NII), and IBM Research-China.</p>
+          <p>My work has been recognized with the German DAAD AInet Fellowship, the 2023 Irish AI Young Talent of the Year Award, and an SFI PhD Scholarship. It has also been featured by RTÉ, Slator, Irish Tech News, and Irish podcasts.</p>
+        </div>
+        <figure class="profile-photo">
+          <img src="assets/chenyang-lyu-twitter.jpg" alt="Portrait of Chenyang Lyu">
+          <figcaption>Photo: X / Twitter profile</figcaption>
+        </figure>
+      </div>
+    </header>
 
-<h2>About</h2>
+    <section id="research"><h2>Research</h2><div class="research-grid"><article class="research-card"><div class="icon" aria-hidden="true">🎙️</div><h3>Speech &amp; Omni Models</h3><p>Speech, vision, video and audio intelligence across understanding and generation.</p><div class="papers"><a href="#publications">Marco-Voice</a> · <a href="#publications">CVQA</a> · <a href="#publications">GPT4Video</a></div></article><article class="research-card"><div class="icon" aria-hidden="true">⚙️</div><h3>LLM Agents and Reliability</h3><p>Traceable multi-agent workflows, tool-feedback defense and robust evaluation.</p><div class="papers"><a href="#publications">Trust No Tool</a> · <a href="#publications">Crayotter</a> · <a href="#publications">CoQuIR</a></div></article><article class="research-card"><div class="icon" aria-hidden="true">🌐</div><h3>Multilingual Models</h3><p>Efficient model adaptation and culturally grounded intelligence across languages.</p><div class="papers"><a href="#publications">Marco-MoE</a> · <a href="#publications">Marco-LLM</a> · <a href="#publications">CulturALL</a></div></article></div></section>
 
+    <hr class="section-rule">
+    <section id="education"><h2>Education</h2><div class="institution-list"><article class="institution"><div class="logo-box"><img src="assets/logos/dcu.png" alt="Dublin City University logo"></div><div><h3>Ph.D. in Computer Science (Machine Learning)</h3><p><a href="https://www.dcu.ie/">Dublin City University</a> · ML-Labs</p></div><time>2019 – 2023</time></article><article class="institution"><div class="logo-box"><img src="assets/logos/neu.png" alt="Northeastern University logo"></div><div><h3>B.Eng. in Software Engineering</h3><p><a href="https://english.neu.edu.cn/">Northeastern University, China</a></p></div><time>2014 – 2018</time></article></div></section>
 
-<p>I am currently a Staff Researcher/Tech Lead at <strong>Alibaba ATH</strong>, where I lead the <strong>Speech and Omni LLM Applied Research</strong> team. Previously, I was a researcher at the Mohamed bin Zayed University of Artificial Intelligence (MBZUAI), focusing on multilingual and multimodal large language models. I earned my Ph.D. in Machine Learning from Dublin City University's ML-Labs in 2023, following a Bachelor of Engineering from Northeastern University in China in 2018. My research lies primarily in natural language processing, with a focus on <strong>LLMs</strong> across <strong>multilingual</strong>, <strong>multimodal</strong>, and <strong>speech</strong> settings, as well as <strong>LLM agents</strong>. My Google Scholar citations are <strong>2,223</strong>, with an <strong>h-index of 23</strong> and an <strong>i10 index of 32</strong>. Recent work includes <strong>CoQuIR</strong>, selected at <strong>ACL 2026</strong>, plus accepted papers at <strong>COLM 2026</strong>, <strong>CVPR 2026</strong>, and <strong>ICASSP 2026</strong>. Other recent work spans <strong>foundational LLMs</strong>, <strong>multilingual/multimodal/speech LLMs</strong>, and <strong>LLM agents</strong>, including <strong>Marco-MoE</strong>, <strong>Trust No Tool</strong>, and <strong>Crayotter</strong>. <strong>GPT4Video</strong> was nominated for the <strong>Best Paper Award</strong> at <strong>ACM-MM 2024</strong>. My open-source projects and contributions have collectively earned <strong>4k+ GitHub stars</strong>, and I won <strong>two championships</strong> and <strong>two runner-up prizes</strong> in the <strong>IWSLT 2025</strong> speech translation competition. Prior to my current role, I gained extensive research experience in large language models through positions as a research assistant and visiting scholar at Tencent AI Lab, Japan's National Institute of Informatics (NII) and IBM Research-China. My work has been recognized with several awards, including the IWSLT 2025 Speech Translation Competition championship, the ACM-MM 2024 Best Paper nomination, the German DAAD AInet Fellowship, the 2023 Irish AI Young Talent of the Year Award and an SFI PhD Scholarship. Additionally, my research has been featured in media outlets such as Irish national broadcaster RTÉ, Slator, Irish Tech News, and Irish podcasts.</p>
-<h2>News</h2>
-<ul>
-<li><strong>[2026/08]</strong> <strong><a href="https://github.com/idwts/Crayotter">Crayotter</a></strong>, a major research initiative on long-horizon video-editing agents, now brings together one open-source project and two papers: <a href="https://arxiv.org/abs/2606.07636">Traceable Multi-Agent Workflows for Long-Form Video Editing</a> and <a href="https://arxiv.org/abs/2608.02694">Learning Long-Horizon Video Editing Agents via Group-Relative Preference Backpropagation</a>. The project has earned <strong>nearly 200 GitHub stars</strong>.</li>
-<li><strong>[2026/07]</strong> Our paper CoQuIR is selected as an <strong>SAC Highlights Award</strong> at <strong>ACL 2026</strong>.</li>
-<li><strong>[2026/07]</strong> Marco-MoE is accepted to <strong>COLM 2026</strong>.</li>
-<li><strong>[2026/04]</strong> Our paper <strong><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=zh-CN&amp;user=0n7cAw0AAAAJ&amp;sortby=pubdate&amp;citation_for_view=0n7cAw0AAAAJ:HE397vMXCloC">Spurious Rewards Paradox: Mechanistically Understanding How RLVR Activates Memorization Shortcuts in LLMs</a></strong> was accepted to <strong>ICML 2026</strong>.</li>
-<li><strong>[2026/02]</strong> One paper elastic transformer is accepted to <strong>CVPR 2026</strong>.</li>
-<li><strong>[2026/01]</strong> Three papers including Marco-Voice,Long Speech, MECAP-R1 are accepted to <strong>ICASSP 2026</strong>.</li>
-<li><strong>[2025/12]</strong> Invited Industry Expert Talk on Marco Models at <strong>ACM Multimedia Asia 2025</strong>, hosted by Dr. Jianquan Liu (NEC).</li>
-<li><strong>[2025/11]</strong> Invited Talk on LLMs Hallucination Detection at <strong>Southern University of Science and Technology (SUSTech)</strong>, hosted by Dr. Linyi Yang.</li>
-<li><strong>[2025/07]</strong> Our team secured <strong>Two Championships and Two Runner-ups</strong> at the <strong>IWSLT 2025</strong> International Speech Translation Competition.</li>
-<li><strong>[2025/05]</strong> Four papers including multilingual LLMs, hallucination detection are accepted to <strong>ACL 2025</strong>.</li>
-<li><strong>[2024/10]</strong> Marco-LLM featured by global media including <strong>Bloomberg, CNBC, and South China Morning Post (SCMP)</strong>.</li>
-<li><p><b>[2023/06]: We have released our Multi-modal Large Language Models named <a href="https://github.com/lyuchenyang/Macaw-LLM">Macaw-LLM</a>!</a></b>.
-</li>
-</ul>
-	
-<h2> Educational Background</h2>
-<ul>
-	<li>Sep 2019 - Jul 2023, <i>Doctor of Philosophy in Computer Science</i>, ML-Labs, Dublin City University</li>
-	<li>Oct 2014 - June 2018, <i>Bachelor of Engineering in Computer Software Engineering</i>, Northeastern University</li>
-</ul>
+    <hr class="section-rule">
+    <section id="experience"><h2>Industry &amp; Research Experience</h2><div class="institution-list"><article class="institution"><div class="logo-box"><img src="assets/logos/alibaba.png" alt="Alibaba logo"></div><div><h3>Staff Researcher / Tech Lead</h3><p><a href="https://www.alibabagroup.com/">Alibaba ATH</a> · Speech and Omni LLM Applied Research</p></div><time>Current</time></article><article class="institution"><div class="logo-box"><img src="assets/logos/mbzuai.png" alt="MBZUAI logo"></div><div><h3>Researcher</h3><p><a href="https://mbzuai.ac.ae/">Mohamed bin Zayed University of Artificial Intelligence</a> · Multilingual and Multimodal LLMs</p></div><time>2023 – 2024</time></article></div><div class="experience-groups" style="margin-top:25px"><div><h3>Visiting &amp; Research Roles</h3><div class="compact-role"><div class="logo-box"><img src="assets/logos/tencent.png" alt="Tencent logo"></div><div><strong>Tencent AI Lab</strong><span>Research Assistant / Visiting Scholar</span></div></div><div class="compact-role"><div class="logo-box"><img src="assets/logos/nii.png" alt="National Institute of Informatics logo"></div><div><strong>National Institute of Informatics</strong><span>Visiting Scholar</span></div></div></div><div><h3>Research Internships</h3><div class="compact-role"><div class="logo-box"><img src="assets/logos/huawei.png" alt="Huawei logo"></div><div><strong>Huawei Noah’s Ark Lab</strong><span>Research Intern · 2020–2021</span></div></div><div class="compact-role"><div class="logo-box"><img src="assets/logos/ibm.jpg" alt="IBM logo"></div><div><strong>IBM Research-China</strong><span>Research Intern · 2018</span></div></div></div></div></section>
 
-<h2> Research Experience</h2>
-<ul>
-	<li>Research Intern, Huawei Noah's Ark Lab, May 2020 - May 2021</li>
-	<li>Research Intern, IBM Research-China, July 2018 - December 2018</li>
-</ul>
+    <hr class="section-rule">
+    <section id="news"><h2>News</h2><div class="news-list"><article class="news-item"><time>[2026/08]</time><p>🎬 <a href="https://github.com/idwts/Crayotter"><strong>Crayotter</strong></a>, a major initiative on long-horizon video-editing agents, now brings together an open-source project and two papers, with nearly 200 GitHub stars.</p></article><article class="news-item"><time>[2026/07]</time><p>🏆 <strong>CoQuIR</strong> was selected for an <strong>ACL 2026 SAC Highlights Award</strong>.</p></article><article class="news-item"><time>[2026/07]</time><p>🎉 <strong>Marco-MoE</strong> was accepted to COLM 2026.</p></article><article class="news-item"><time>[2026/04]</time><p>🎉 <strong>Spurious Rewards Paradox</strong> was accepted to ICML 2026.</p></article><article class="news-item"><time>[2026/02]</time><p>🎉 <strong>ElasticFormer</strong> was accepted to CVPR 2026.</p></article><article class="news-item"><time>[2026/01]</time><p>🎉 Marco-Voice, LongSpeech and MECap-R1 were accepted to ICASSP 2026.</p></article><article class="news-item"><time>[2025/12]</time><p>🎤 Invited industry expert talk on Marco Models at ACM Multimedia Asia 2025.</p></article><article class="news-item"><time>[2025/07]</time><p>🏆 Our team secured two championships and two runner-up prizes at IWSLT 2025.</p></article><article class="news-item"><time>[2025/05]</time><p>🎉 Four papers on multilingual LLMs and hallucination detection were accepted to ACL 2025.</p></article></div></section>
 
-  
-<h2>Selected Publications</h2>
-<!--  <a href=></a> -->
-<ul>
-    <li> <strong>CoQuIR: A Comprehensive Benchmark for Code Quality-Aware Information Retrieval</strong><br> Jiahui Geng, Fengyu Cai, Shaobo Cui, Qing Li, Liangwei Chen, <strong>Chenyang Lyu</strong>, Haonan Li, Derui Zhu, Alexander Pretschner, Heinz Koeppl, Fakhri Karray <br> In <em>Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (ACL 2026)</em> <span style="color:red;"><strong>SAC Highlights Award</strong></span></li>
-    <li> <strong>Marco-MoE: Open Multilingual Mixture-of-Expert Language Models with Efficient Upcycling</strong><br> Fan Jiang, Yu Zhao, <strong>Chenyang Lyu</strong>, Tianqi Shi, Yichao Du, Feihu Jiang, Longyue Wang, Weihua Luo <br> In <em>Conference on Language Modeling (COLM 2026)</em></li>
-    <li> <strong>ElasticFormer: Detecting Objects in HRW Shots via Elastic Computing Vision Transformer</strong><br> Xiang Li, Wenxi Li, Yuetong Wang, <strong>Chenyang Lyu</strong>, Haozhe Lin, Guiguang Ding, Yuchen Guo <br> In <em>Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2026)</em></li>
-    <li> <strong>LongSpeech: A Scalable Benchmark for Transcription, Translation and Understanding in Long Speech</strong><br> Fei Yang, Xuanfan Ni, Renyi Yang, Jiahui Geng, Qing Li, <strong>Chenyang Lyu*</strong>, Yichao Du, Longyue Wang, Weihua Luo, Kaifu Zhang <br> In <em>IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP 2026)</em></li>
-    <li> <strong>MECap-R1: Emotion-aware Policy with Reinforcement Learning for Multimodal Emotion Captioning</strong><br> Haoqin Sun, <strong>Chenyang Lyu*</strong>, Xiangyu Kong, Shiwan Zhao, Jiaming Zhou, Hui Wang, Aobo Kong, Jinghua Zhao, Longyue Wang, Weihua Luo, Kaifu Zhang, Yong Qin <br> In <em>IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP 2026)</em></li>
-    <li> <strong>Marco-Voice Technical Report</strong><br> Fengping Tian, <strong>Chenyang Lyu*</strong>, Xuanfan Ni, Haoqin Sun, Qingjuan Li, Zhiqiang Qian, Haijun Li, Longyue Wang, Zhao Xu, Weihua Luo, Kaifu Zhang <br> In <em>IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP 2026)</em></li>
-    <li> <strong>Trust No Tool: Evaluating and Defending LLM Agents under Untrusted Tool Feedback</strong><br> Lecheng Yan, Ruizhe Li, Xicheng Han, Wenxi Li, Binwu Wang, Longyue Wang, <strong>Chenyang Lyu</strong>, Guanhua Chen <br> Preprint 2026, agent safety</li>
-    <li> <strong>Crayotter: Traceable Multi-Agent Workflows for Long-Form Video Editing</strong><br> Lecheng Yan, Yichong Zhang, Ben Pan, Xiaoyu Zheng, Jiawei Qian, Anqi Wu, Wenxi Li, <strong>Chenyang Lyu</strong> <br> Preprint 2026, multi-agent workflows</li>
-    <li> <strong>CulturALL: Benchmarking Multilingual and Multicultural Competence of LLMs on Grounded Tasks</strong><br> Peiqin Lin, <strong>Chenyang Lyu</strong>, Wenjiang Luo, Haotian Ye, Md Mehrab Hossain, Chunlan Ma, Shaoxiong Ji, Younes Samih, Bo Zeng, Fan Jiang, Yuanbin Cao, Dilda Duisenbek, Adrian Neo Sau Xun, Daria Pozdniakova, Liubou Misevich, Nevena Marinkovic, Ngoc Gia Linh Nguyen, Thi Khanh Linh Do, Sarakmatak Sophy, Baotian Hu, Guanhua Chen, Gongbo Tang, Alham Fikri Aji, Longyue Wang, Weihua Luo <br> Preprint 2026, multilingual benchmark</li>
-    <li> <strong>ReFreeKV: Towards Threshold-Free KV Cache Compression</strong><br> Xuanfan Ni, Liyan Xu, <strong>Chenyang Lyu</strong>, Longyue Wang, Mo Yu, Lemao Liu, Fandong Meng, Jie Zhou, Piji Li <br> Findings of ACL 2026</li>
-    <li> <strong>SemEval-2026 Task 7: Everyday Knowledge Across Diverse Languages and Cultures</strong><br> Nedjma Ousidhoum, Junho Myung, Carla Pérez-Almendros, Jiho Jin, Amr Keleg, Meriem Beloucif, Yi Zhou, Rodrigo Agerri, Vladimir Araujo, Naomi Baes, James Barry, Joanne Boisson, Nancy F. Chen, Christine de Kock, Aleksandra Edwards, Joseba Fernandez de Landa, Mohamed Fazli Imam, Huda Hakami, Shu-Kai Hsieh, Joseph Marvin Imperial, Roy Ka-Wei Lee, Zhengyuan Liu, <strong>Chenyang Lyu</strong>, Younes Samih, Johan Sjons, Bryan Tan, Asahi Ushio, Weihua Zheng, Alice Oh, José Camacho-Collados <br> In <em>Proceedings of the 20th International Workshop on Semantic Evaluation (SemEval-2026), ACL 2026</em> (Shared Task Organizer)</li>
-    <li> <strong>Marco-Bench-MIF: On Multilingual Instruction-Following Capability of Large Language Models</strong><br> Wenxi Li, Jingchen Huang, <strong>Chenyang Lyu*</strong>, Mo-Ran Liu, Haozhe Lin, Guiguang Ding, Yuchen Guo <br> In <em>Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (ACL 2025)</em></li>
-    <li> <strong>HD-NDEs: Neural Differential Equations for Hallucination Detection in LLMs</strong><br> Qing Li, Jiahui Geng, Zongxiong Chen, Derui Zhu, Yuxia Wang, Congbo Ma, <strong>Chenyang Lyu</strong>, Fakhri Karray <br> In <em>Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (ACL 2025)</em></li>
-    <li> <strong>EditEval: Towards Comprehensive and Automatic Evaluation for Text-guided Video Editing</strong><br> Bingshuai Liu, Ante Wang, Zijun Min, <strong>Chenyang Lyu</strong>, Longyue Wang, Zhihao Wang, Xu Han, Peng Li, Jinsong Su <br> In <em>Proceedings of the 33rd ACM International Conference on Multimedia (ACM-MM 2025)</em></li>
-    <li> <strong>GPT4Video: A Unified Multimodal Large Language Model for lnstruction-Followed Understanding and Safety-Aware Generation</strong><br> Zhanyu Wang, Longyue Wang, Zhen Zhao, Minghao Wu, <strong>Chenyang Lyu</strong>, Huayang Li, Deng Cai, Luping Zhou, Shuming Shi, Zhaopeng Tu <br> In <em>Proceedings of the 32nd ACM International Conference on Multimedia (ACM-MM 2024)</em> <span style="color:red;"><strong>Best Paper Awards Nomination</strong></span></li>
-    <li> <strong>CVQA: Culturally-diverse Multilingual Visual Question Answering Benchmark</strong><br> David Romero*, <strong>Chenyang Lyu*</strong>, Haryo Akbarianto Wibowo, Teresa Lynn, Injy Hamed, Rada Mihalcea, Thamar Solorio, Alham Fikri Aji <br> In <em>Advances in Neural Information Processing Systems, Dataset and Benchmark Track (NeurIPS 2024) (Oral presentation)</em></li>
-    <li> <strong>Benchmarking and Improving Long-Text Translation with Large Language Models</strong><br> Longyue Wang, Zefeng Du, Wenxiang Jiao, <strong>Chenyang Lyu</strong>, Jianhui Pang, Leyang Cui, Kaiqiang Song, Derek F. Wong, Shuming Shi, Zhaopeng Tu <br> In <em>Findings of the 62nd Annual Meeting of the Association for Computational Linguistics (ACL 2024)</em></li>
-    <li> <strong>A Paradigm Shift: The Future of Machine Translation Lies with Large Language Models</strong><br> <strong>Chenyang Lyu</strong>, Zefeng Du, Jitao Xu, Yitao Duan, Minghao Wu, Teresa Lynn, Alham Fikri Aji, Derek F. Wong, Longyue Wang <br> In <em>Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)</em></li>
-    <li> <strong>Large Language Models as Code Executors: An Exploratory Study</strong><br> <strong>Chenyang Lyu</strong>, Lecheng Yan, Rui Xing, Wenxi Li, Younes Samih, Tianbo Ji, Longyue Wang <br> Preprint 2024</li>
-</ul>
-
-<h2>Teaching Experience</h2>
-      <ul>
-        <li> CA-146/297, Introduction to Programming, 2020, Dublin City University, Teaching Assistant </li>
-	<li> CA-271, Machine Learning, 2022, Dublin City University, Guest Lecturer </li>
-	<li> CA-168, Digital World, 2022, Dublin City University, Guest Lecturer </li>
-      </ul>
-
-<h2>Professional Activities</h2>
-<ul>
-	<li>PC Member <p> </p>
-	<ul>
-		<li>The 45th European Conference on Information Retrieval, ECIR 2023</li>
-	</ul>
-	<ul>
-	<li>The 61st Annual Meeting of the Association for Computational Linguistics, ACL 2023</li>
-	</ul>
-	<ul>
-		<li> The 32nd International Joint Conference on Artificial Intelligence, IJCAI 2023</li>
-	</ul>
-	<ul>
-		<li>The 3rd Workshop on Financial Technology on the Web in conjunction with The Web Conference 2023, FinWeb 2023</li>
-	</ul>
-	</li>
-	
-	<li>Conference Reviewer <p> </p>
-		<ul>
-    			<li>The 60th Annual Meeting of the Association for Computational Linguistics, ACL 2022</li>
-		</ul>
-		<ul>
-    			<li>The 2022 Conference on Empirical Methods in Natural Language Processing, EMNLP 2022</li>
-		</ul>
-		<ul>
-    			<li>The 29th International Conference on Computational Linguistics, COLING 2022</li>
-		</ul>
-		<ul>
-			<li> The 32nd International Joint Conference on Artificial Intelligence, IJCAI 2023</li>
-		</ul>
-	</li>
-	<li>Workshop Reviewer <p> </p>
-		<ul>
-    			<li>EvoNLP: The First Workshop on Ever Evolving NLP, EMNLP 2022</li>
-		</ul>
-		<ul>
-    			<li>FinNLP: The Fourth Workshop on Financial Technology and Natural Language Processing, EMNLP 2022</li>
-		</ul>
-		<ul>
-    			<li>FinWeb: The 3rd Workshop on Financial Technology on the Web, WWW 2023</li>
-		</ul>
-	</li>
-	<li>Journal Reviewer <p> </p>
-		<ul>
-    			<li>IEEE Transaction on Multimedia, IEEE</li>
-		</ul>
-		<ul>
-    			<li>Social Network Analysis and Mining, Springer</li>
-		</ul>
-		<ul>
-    			<li>Connection Science, Taylor & Francis</li>
-		</ul>
-	</li>
-	<li>Regular Reviewer <p> </p>
-		<ul>
-    			<li>ACL Rolling Review</li>
-		</ul>
-	</li>
-</ul>
-
-<p><center>
-<div id="clustrmaps-widget" style="width:30%; height: 30%;">
-<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=4B-_L2ihnnyHXWou7R1vVgH1uyleqYoxEhVgoI8e4Ak&cl=ffffff&w=a"></script>
-</div>        
-</center></p>
-
-<!-- <a href="https://info.flagcounter.com/lXAv"><img src="https://s05.flagcounter.com/count2/lXAv/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a> -->
-
-</div>
-</div>
-
+    <hr class="section-rule">
+    <section id="publications"><h2>Selected Publications</h2><p class="pub-note">* denotes corresponding or equal contribution. See <a href="https://scholar.google.com/citations?user=0n7cAw0AAAAJ">Google Scholar</a> and <a href="https://dblp.org/pid/248/1663.html">DBLP</a> for the complete record.</p>
+      <article class="publication"><div class="abbr">ACL<br>2026</div><div><div class="pub-title">CoQuIR: A Comprehensive Benchmark for Code Quality-Aware Information Retrieval</div><p class="authors">Jiahui Geng, Fengyu Cai, Shaobo Cui, Qing Li, Liangwei Chen, <strong>Chenyang Lyu</strong>, et al.</p><p class="venue">Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics.</p><div class="pub-links"><span class="award">SAC Highlights Award</span><a href="https://scholar.google.com/citations?user=0n7cAw0AAAAJ">Scholar</a></div></div></article>
+      <article class="publication"><div class="abbr">COLM<br>2026</div><div><div class="pub-title">Marco-MoE: Open Multilingual Mixture-of-Expert Language Models with Efficient Upcycling</div><p class="authors">Fan Jiang, Yu Zhao, <strong>Chenyang Lyu</strong>, Tianqi Shi, Yichao Du, et al.</p><p class="venue">Conference on Language Modeling.</p><div class="pub-links"><a href="https://scholar.google.com/citations?user=0n7cAw0AAAAJ">Scholar</a><a href="https://dblp.org/pid/248/1663.html">DBLP</a></div></div></article>
+      <article class="publication"><div class="abbr">CVPR<br>2026</div><div><div class="pub-title">ElasticFormer: Detecting Objects in HRW Shots via Elastic Computing Vision Transformer</div><p class="authors">Xiang Li, Wenxi Li, Yuetong Wang, <strong>Chenyang Lyu</strong>, et al.</p><p class="venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition.</p></div></article>
+      <article class="publication"><div class="abbr">ICASSP<br>2026</div><div><div class="pub-title">LongSpeech: A Scalable Benchmark for Transcription, Translation and Understanding in Long Speech</div><p class="authors">Fei Yang, Xuanfan Ni, Renyi Yang, Jiahui Geng, Qing Li, <strong>Chenyang Lyu*</strong>, et al.</p><p class="venue">IEEE International Conference on Acoustics, Speech, and Signal Processing.</p></div></article>
+      <article class="publication"><div class="abbr">ACM MM<br>2024</div><div><div class="pub-title">GPT4Video: A Unified Multimodal Large Language Model for Instruction-Followed Understanding and Safety-Aware Generation</div><p class="authors">Zhanyu Wang, Longyue Wang, Zhen Zhao, Minghao Wu, <strong>Chenyang Lyu</strong>, et al.</p><p class="venue">Proceedings of the 32nd ACM International Conference on Multimedia.</p><div class="pub-links"><span class="award">Best Paper Award Nomination</span><a href="https://scholar.google.com/citations?user=0n7cAw0AAAAJ">Scholar</a></div></div></article>
+      <article class="publication"><div class="abbr">NeurIPS<br>2024</div><div><div class="pub-title">CVQA: Culturally-diverse Multilingual Visual Question Answering Benchmark</div><p class="authors">David Romero*, <strong>Chenyang Lyu*</strong>, Haryo Akbarianto Wibowo, Teresa Lynn, et al.</p><p class="venue">NeurIPS Datasets and Benchmarks Track.</p><div class="pub-links"><span class="award">Oral Presentation</span></div></div></article>
+      <a class="all-pubs" href="https://scholar.google.com/citations?user=0n7cAw0AAAAJ">View the complete publication list →</a>
+    </section>
+  </main>
+  <footer><div class="container"><div class="footer-row"><span>© 2026 Chenyang Lyu</span><span>Last updated: August 2026</span></div><div class="source-note">Local design study inspired by the al-folio academic layout. No external deployment.</div></div></footer>
 </body>
 </html>
